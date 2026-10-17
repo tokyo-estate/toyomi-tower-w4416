@@ -107,7 +107,10 @@ figcaption .t{color:#fff;font-weight:400}
 @keyframes panlr{from{object-position:0% 50%}to{object-position:100% 50%}}
 @media (max-aspect-ratio:1/1){.movie video.pan{object-position:0% 50%;animation:panlr 8s linear infinite alternate}
 .movie.wide video,.movie.wide.short video{height:auto;min-height:0;aspect-ratio:16/9;max-height:none;object-fit:cover;animation:none;object-position:50% 50%}
-.movie.wide .cap{position:static;padding:18px 22px 30px;background:#000}}
+.movie.wide .cap{position:static;padding:18px 22px 30px;background:#000}
+#tl1 .cap,#tl2 .cap-sub{display:none}
+#tl2 .cap-main-sp{display:block}}
+.cap-main-sp{display:none}
 .movie .cap{position:absolute;left:0;right:0;bottom:0;padding:120px 22px 40px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.8));z-index:2}
 .movie .cap .no{display:flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:.34em;color:var(--gold2);text-transform:uppercase}
 .movie .cap .no::before{content:"";width:34px;height:1px;background:var(--gold2);flex:0 0 auto}
@@ -284,7 +287,7 @@ figcaption .d{display:none}
 </div>
 
 <!-- 01 TIME-LAPSE -->
-<section class="movie wide">
+<section class="movie wide" id="tl1">
   <video class="lazy pan" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_timelapse.jpg" data-webm="video/timelapse.webm" data-mp4="video/timelapse.mp4"></video>
   <div class="cap">
     <p class="no">01 — Time-lapse</p>
@@ -292,11 +295,16 @@ figcaption .d{display:none}
     <p>4416号室のリビングから見た24時間のイメージ（AI生成の動画。家具・内装・眺望はイメージです）。</p>
   </div>
 </section>
-<section class="movie wide short">
+<section class="movie wide short" id="tl2">
   <video class="lazy pan" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_timelapse_view.jpg" data-webm="video/timelapse_view.webm" data-mp4="video/timelapse_view.mp4"></video>
-  <div class="cap">
+  <div class="cap cap-sub">
     <h2>窓辺から、<br>東京湾の一日</h2>
     <p>4416号室の窓辺から見た24時間のイメージ（AI生成の動画。内装・眺望はイメージです）。</p>
+  </div>
+  <div class="cap cap-main-sp">
+    <p class="no">01 — Time-lapse</p>
+    <h2>海と空が、<br>一日の色を変えていく</h2>
+    <p>4416号室のリビングと窓辺から見た24時間のイメージ（AI生成の動画。家具・内装・眺望はイメージです）。</p>
   </div>
 </section>
 
