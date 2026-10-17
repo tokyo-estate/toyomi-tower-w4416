@@ -62,6 +62,7 @@ ul{list-style:none}
 .hero .p small{font-size:11px;color:#cfc9bd}
 .scroll{position:absolute;right:20px;bottom:calc(22px + env(safe-area-inset-bottom));z-index:3;font-size:10px;font-weight:500;letter-spacing:.3em;color:#fff;writing-mode:vertical-rl;display:flex;align-items:center;gap:10px}
 .scroll::after{content:"";width:1px;height:48px;background:#fff;animation:sc 1.8s ease-in-out infinite}
+.scroll{text-shadow:0 1px 8px rgba(0,0,0,.6)}
 @keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 /* ---------- key numbers ---------- */
@@ -278,6 +279,7 @@ figcaption .d{display:none}
   <div class="media">
   <video id="heroVideo" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" autoplay preload="auto" aria-hidden="true"></video>
   <img class="poster" id="heroPoster" src="img/poster_sp.jpg" width="720" height="960" alt="" aria-hidden="true">
+  <div class="scroll">SCROLL</div>
   </div>
   <div class="in">
     <p class="en">The Toyomi Tower Marine &amp; Sky</p>
@@ -288,7 +290,6 @@ figcaption .d{display:none}
     </ul>
     <p class="p"><span>販売価格</span><b>3億9,500万円</b><small>（税込）</small></p>
   </div>
-  <div class="scroll">SCROLL</div>
 </header>
 
 <!-- KEY NUMBERS -->
