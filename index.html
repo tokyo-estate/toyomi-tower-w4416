@@ -106,7 +106,7 @@ figcaption .t{color:#fff;font-weight:400}
 .movie.short video{height:62svh;min-height:380px;max-height:620px}
 @keyframes panlr{from{object-position:0% 50%}to{object-position:100% 50%}}
 @media (max-aspect-ratio:1/1){.movie video.pan{object-position:0% 50%;animation:panlr 8s linear infinite alternate}
-.movie.wide video{height:auto;aspect-ratio:16/9;max-height:none;object-fit:cover;animation:none;object-position:50% 50%}
+.movie.wide video,.movie.wide.short video{height:auto;min-height:0;aspect-ratio:16/9;max-height:none;object-fit:cover;animation:none;object-position:50% 50%}
 .movie.wide .cap{position:static;padding:18px 22px 30px;background:#000}}
 .movie .cap{position:absolute;left:0;right:0;bottom:0;padding:120px 22px 40px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.8));z-index:2}
 .movie .cap .no{display:flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:.34em;color:var(--gold2);text-transform:uppercase}
