@@ -97,6 +97,7 @@ figcaption .t{color:#fff;font-weight:400}
 .full figcaption{padding-left:20px;padding-right:20px}
 .grid{display:grid;gap:22px 14px;grid-template-columns:1fr}
 .grid-2{grid-template-columns:1fr 1fr}
+.grid-2 .sp-full{grid-column:1/-1}
 .grid img{width:100%;aspect-ratio:var(--ar,4/3);object-fit:cover;background:#222}
 .ar-3-4{--ar:3/4}.ar-16-9{--ar:16/9}.ar-1-1{--ar:1/1}.ar-auto{--ar:auto;object-fit:contain;background:#fff}
 .stack{display:grid;gap:44px}
@@ -234,6 +235,7 @@ figcaption .d{display:none}
   .grid{gap:28px 24px}
   .grid-d2{grid-template-columns:1fr 1fr}
   .grid-d3{grid-template-columns:1fr 1fr 1fr}
+  .grid-d3 .sp-full{grid-column:auto}
   .offset>*:nth-child(2){margin-top:72px}
   .pc{display:inline}
   br.sp{display:none}
@@ -456,7 +458,7 @@ figcaption .d{display:none}
       <div class="grid grid-2 grid-d3 rv">
         <figure class="zoom"><img src="img/c11_guest_cave.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t">3F ゲストルーム</span><span class="d">　海辺のケーブハウス</span></figcaption></figure>
         <figure class="zoom"><img src="img/c12_guest_iki.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t">3F ゲストルーム</span><span class="d">　海辺の和旅館</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c13_guest_glamping.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t">3F ゲストルーム</span><span class="d">　海辺のキャンプ</span></figcaption></figure>
+        <figure class="zoom sp-full"><img src="img/c13_guest_glamping.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t">3F ゲストルーム</span><span class="d">　海辺のキャンプ</span></figcaption></figure>
       </div>
     </div>
   </div>
@@ -547,7 +549,7 @@ figcaption .d{display:none}
       <h2>物件概要</h2>
     </div>
     <div class="grid grid-d2 rv" style="align-items:start">
-      <figure style="background:#fff;padding:14px;border:1px solid #e4dfd6"><img class="ar-auto" src="img/u00_plan2d.jpg" width="1790" height="1360" loading="lazy" alt="間取図"><figcaption><span class="t">間取図</span><span class="d">　2LDK＋2WIC＋SIC＋S（W-104Csw メニュープラン1）</span></figcaption></figure>
+      <figure style="background:#fff;padding:14px;border:1px solid #e4dfd6"><img class="ar-auto" src="img/u00_plan2d.jpg" width="1570" height="1590" loading="lazy" alt="間取図"><figcaption><span class="t">間取図</span><span class="d">　2LDK＋2WIC＋SIC＋S（W-104Csw メニュープラン1）</span></figcaption></figure>
       <div>
         <table class="tbl">
           <tr><th>物件名</th><td>ザ 豊海タワー マリン＆スカイ　W4416号室</td></tr>
