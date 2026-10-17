@@ -116,7 +116,9 @@ figcaption .t{color:#fff;font-weight:400}
 .movie.short video,.movie.short img.bg{height:62svh;min-height:380px;max-height:620px}
 .movie img.bg{display:block;width:100%;object-fit:cover;object-position:50% 45%}
 @keyframes panlr{from{object-position:0% 50%}to{object-position:100% 50%}}
+@keyframes panrl{from{object-position:100% 50%}to{object-position:0% 50%}}
 @media (max-aspect-ratio:1/1){.movie video.pan{object-position:0% 50%;animation:panlr 8s linear infinite alternate}
+.movie video.pan-rl{object-position:100% 50%;animation:panrl 8s linear infinite alternate}
 .movie.wide video,.movie.wide.short video{height:auto;min-height:0;aspect-ratio:16/9;max-height:none;object-fit:cover;animation:none;object-position:50% 50%}
 .movie.wide .cap{position:static;padding:18px 22px 30px;background:#000}
 #tl1 .cap,#tl2 .cap-sub{display:none}
@@ -421,7 +423,7 @@ figcaption .d{display:none}
 
 <!-- 07 COMMON SPACE -->
 <section class="movie short">
-  <video class="lazy" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_sky.jpg" data-webm="video/loop_sky.webm" data-mp4="video/loop_sky.mp4"></video>
+  <video class="lazy pan-rl" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_sky.jpg" data-webm="video/loop_sky.webm" data-mp4="video/loop_sky.mp4"></video>
   <div class="cap">
     <p class="no">07 — Common Space</p>
     <h2>ホテルのような、<br>ラグジュアリーな共用空間</h2>
