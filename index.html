@@ -268,7 +268,9 @@ figcaption .d{display:none}
 .bar .lang{display:flex;gap:9px;margin-left:auto;margin-right:12px;font-size:10px;letter-spacing:.12em;color:#cfc9bd;flex:0 0 auto;pointer-events:auto}
 .bar .lang a{cursor:pointer;opacity:.55;padding:6px 2px;border-bottom:1px solid transparent;-webkit-tap-highlight-color:transparent}
 .bar .lang a.on{opacity:1;color:var(--gold2);border-bottom-color:var(--gold2)}
-.bar .brand{min-width:0}.bar .brand small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .brand{min-width:0;flex:1 1 auto}.bar .brand small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .brand .sp-only{display:none}
+@media (max-width:640px){.bar .brand .pc-only{display:none}.bar .brand .sp-only{display:block}.bar .lang{margin-left:0;margin-right:10px}.bar .price{flex:0 0 auto}}
 html[lang="zh"] body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans JP",sans-serif}
 html[lang="en"] .movie .cap p,html[lang="zh"] .movie .cap p{max-width:720px}
 html[lang="en"] .hero h1{letter-spacing:.06em;font-size:clamp(18px,5vw,30px)}
@@ -279,7 +281,7 @@ html[lang="zh"] .keys .v{font-size:clamp(24px,7vw,40px)}
 <body>
 
 <div class="bar" id="bar">
-  <div class="brand"><span class="pc">THE TOYOMI TOWER MARINE &amp; SKY</span><small data-i18n="t001">ザ 豊海タワー マリン＆スカイ　W4416</small></div>
+  <div class="brand"><span class="pc">THE TOYOMI TOWER MARINE &amp; SKY</span><small class="pc-only" data-i18n="t001">ザ 豊海タワー マリン＆スカイ　W4416</small><small class="sp-only">W4416</small></div>
   <div class="lang" id="lang"><a data-lang="ja">JA</a><a data-lang="en">EN</a><a data-lang="zh">中文</a></div>
   <div class="price"><b data-i18n="t002">3億9,500万円</b></div>
 </div>
