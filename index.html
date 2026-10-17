@@ -265,13 +265,23 @@ figcaption .d{display:none}
   .tl li{padding:0 12px 0 0}
   .tl li::before{left:0;top:-30px}
 }
+.bar .lang{display:flex;gap:9px;margin-left:auto;margin-right:12px;font-size:10px;letter-spacing:.12em;color:#cfc9bd;flex:0 0 auto}
+.bar .lang a{cursor:pointer;opacity:.55;padding:2px 0;border-bottom:1px solid transparent}
+.bar .lang a.on{opacity:1;color:var(--gold2);border-bottom-color:var(--gold2)}
+.bar .brand{min-width:0}.bar .brand small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html[lang="zh"] body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans JP",sans-serif}
+html[lang="en"] .movie .cap p,html[lang="zh"] .movie .cap p{max-width:720px}
+html[lang="en"] .hero h1{letter-spacing:.06em;font-size:clamp(18px,5vw,30px)}
+html[lang="zh"] .keys .v,html[lang="en"] .keys .v{white-space:nowrap;letter-spacing:-.02em}
+html[lang="zh"] .keys .v{font-size:clamp(24px,7vw,40px)}
 </style>
 </head>
 <body>
 
 <div class="bar" id="bar">
-  <div class="brand"><span class="pc">THE TOYOMI TOWER MARINE &amp; SKY</span><small>ザ 豊海タワー マリン＆スカイ　W4416</small></div>
-  <div class="price"><b>3億9,500万円</b></div>
+  <div class="brand"><span class="pc">THE TOYOMI TOWER MARINE &amp; SKY</span><small data-i18n="t001">ザ 豊海タワー マリン＆スカイ　W4416</small></div>
+  <div class="lang" id="lang"><a data-lang="ja">JA</a><a data-lang="en">EN</a><a data-lang="zh">中文</a></div>
+  <div class="price"><b data-i18n="t002">3億9,500万円</b></div>
 </div>
 
 <!-- HERO -->
@@ -284,11 +294,11 @@ figcaption .d{display:none}
   <div class="in">
     <p class="en">The Toyomi Tower Marine &amp; Sky</p>
     <p class="no">4416<small>44F</small></p>
-    <h1>ザ 豊海タワー マリン＆スカイ</h1>
+    <h1 data-i18n="t003">ザ 豊海タワー マリン＆スカイ</h1>
     <ul class="spec">
-      <li>西ウイング 44階</li><li>南西向き</li><li>2LDK＋2WIC＋SIC＋S</li><li>面積 106.82㎡</li><li>LDK 約29.4帖</li><li>2027年8月 引渡予定</li>
+      <li data-i18n="t004">西ウイング 44階</li><li data-i18n="t005">南西向き</li><li>2LDK＋2WIC＋SIC＋S</li><li data-i18n="t006">面積 106.82㎡</li><li data-i18n="t007">LDK 約29.4帖</li><li data-i18n="t008">2027年8月 引渡予定</li>
     </ul>
-    <p class="p"><span>販売価格</span><b>3億9,500万円</b><small>（税込）</small></p>
+    <p class="p" data-i18n="t009"><span data-i18n="t157">販売価格</span><b data-i18n="t002">3億9,500万円</b><small data-i18n="t010">（税込）</small></p>
   </div>
 </header>
 
@@ -296,11 +306,11 @@ figcaption .d{display:none}
 <div class="keys">
   <ul>
     <li><div class="v">44<small>F</small></div><div class="k">West Wing</div></li>
-    <li><div class="v">106.82<small>㎡</small></div><div class="k">契約面積</div></li>
+    <li><div class="v">106.82<small>㎡</small></div><div class="k" data-i18n="t011">契約面積</div></li>
     <li><div class="v">2<small>LDK</small></div><div class="k">Plan</div></li>
-    <li><div class="v">南西<small>向き</small></div><div class="k">Direction</div></li>
-    <li><div class="v">2,046<small>戸</small></div><div class="k">Residences</div></li>
-    <li><div class="v">10<small>分</small></div><div class="k">勝どき駅 徒歩</div></li>
+    <li><div class="v" data-i18n="t012">南西<small data-i18n="t013">向き</small></div><div class="k">Direction</div></li>
+    <li><div class="v" data-i18n="t014">2,046<small data-i18n="t015">戸</small></div><div class="k">Residences</div></li>
+    <li><div class="v" data-i18n="t016">10<small data-i18n="t017">分</small></div><div class="k" data-i18n="t018">勝どき駅 徒歩</div></li>
   </ul>
 </div>
 
@@ -309,20 +319,20 @@ figcaption .d{display:none}
   <video class="lazy pan" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_timelapse.jpg" data-webm="video/timelapse.webm" data-mp4="video/timelapse.mp4"></video>
   <div class="cap">
     <p class="no">01 — Time-lapse</p>
-    <h2>海と空が、<br>一日の色を変えていく</h2>
-    <p>4416号室のリビングから見た24時間のイメージ（AI生成の動画。家具・内装・眺望はイメージです）。</p>
+    <h2 data-i18n="t019">海と空が、<br>一日の色を変えていく</h2>
+    <p data-i18n="t020">4416号室のリビングから見た24時間のイメージ（AI生成の動画。家具・内装・眺望はイメージです）。</p>
   </div>
 </section>
 <section class="movie wide short" id="tl2">
   <video class="lazy pan" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_timelapse_view.jpg" data-webm="video/timelapse_view.webm" data-mp4="video/timelapse_view.mp4"></video>
   <div class="cap cap-sub">
-    <h2>窓辺から、<br>東京湾の一日</h2>
-    <p>4416号室の窓辺から見た24時間のイメージ（AI生成の動画。内装・眺望はイメージです）。</p>
+    <h2 data-i18n="t021">窓辺から、<br>東京湾の一日</h2>
+    <p data-i18n="t022">4416号室の窓辺から見た24時間のイメージ（AI生成の動画。内装・眺望はイメージです）。</p>
   </div>
   <div class="cap cap-main-sp">
     <p class="no">01 — Time-lapse</p>
-    <h2>海と空が、<br>一日の色を変えていく</h2>
-    <p>4416号室のリビングと窓辺から見た24時間のイメージ（AI生成の動画。家具・内装・眺望はイメージです）。</p>
+    <h2 data-i18n="t019">海と空が、<br>一日の色を変えていく</h2>
+    <p data-i18n="t023">4416号室のリビングと窓辺から見た24時間のイメージ（AI生成の動画。家具・内装・眺望はイメージです）。</p>
   </div>
 </section>
 
@@ -330,17 +340,17 @@ figcaption .d{display:none}
 <section class="light plan-top">
   <div class="wrap">
     <div class="plan-grid">
-      <figure class="box rv zoom"><img src="img/u00_plan3d.jpg" width="1800" height="1344" loading="lazy" alt="3D間取図 W-104Csw メニュープラン1"><figcaption><span class="t">3D間取図</span><span class="d">　メニュープラン1・家具はイメージです</span></figcaption></figure>
+      <figure class="box rv zoom"><img src="img/u00_plan3d.jpg" width="1800" height="1344" loading="lazy" alt="3D間取図 W-104Csw メニュープラン1"><figcaption><span class="t" data-i18n="t024">3D間取図</span><span class="d" data-i18n="t025">　メニュープラン1・家具はイメージです</span></figcaption></figure>
       <div class="meta rv">
         <div class="head" style="margin:0">
           <p class="no">02 — Floor Plan</p>
-          <h2>弧を描く窓辺に、<br>約29.4帖のLDK</h2>
+          <h2 data-i18n="t026">弧を描く窓辺に、<br>約29.4帖のLDK</h2>
         </div>
-        <div class="big">106.82<small>㎡（契約面積）</small></div>
-        <p class="note" style="margin:-6px 0 14px">壁芯104.39㎡＋トランクルーム1.50㎡<br class="sp">＋専有防災倉庫0.93㎡</p>
-        <p>東京湾に向かって<br class="sp">ラウンドしたサッシが、<br class="sp">約29.4帖のリビングダイニングを<br class="sp">包み込みます。<br>主寝室と洋室には<br class="sp">それぞれウォークインクローゼット、<br class="sp">玄関には約2.1帖の<br class="sp">シューズインクローゼット。<br>LD・主寝室の天井高は約2.6m。</p>
+        <div class="big" data-i18n="t027">106.82<small data-i18n="t028">㎡（契約面積）</small></div>
+        <p class="note" style="margin:-6px 0 14px" data-i18n="t029">壁芯104.39㎡＋トランクルーム1.50㎡<br class="sp">＋専有防災倉庫0.93㎡</p>
+        <p data-i18n="t030">東京湾に向かって<br class="sp">ラウンドしたサッシが、<br class="sp">約29.4帖のリビングダイニングを<br class="sp">包み込みます。<br>主寝室と洋室には<br class="sp">それぞれウォークインクローゼット、<br class="sp">玄関には約2.1帖の<br class="sp">シューズインクローゼット。<br>LD・主寝室の天井高は約2.6m。</p>
         <ul class="chips">
-          <li>LDK 29.4帖</li><li>キッチン 3.4帖</li><li>主寝室 9.0帖</li><li>洋室 6.1帖</li><li>WIC 2.2・1.0帖</li><li>SIC 2.1帖</li><li>納戸 1.1帖</li><li>浴室 1620</li><li>天井高 約2.6m</li><li>バルコニー 13.34㎡</li><li>トランクルーム 1.50㎡</li><li>専有防災倉庫 0.93㎡</li>
+          <li data-i18n="t031">LDK 29.4帖</li><li data-i18n="t032">キッチン 3.4帖</li><li data-i18n="t033">主寝室 9.0帖</li><li data-i18n="t034">洋室 6.1帖</li><li data-i18n="t035">WIC 2.2・1.0帖</li><li data-i18n="t036">SIC 2.1帖</li><li data-i18n="t037">納戸 1.1帖</li><li data-i18n="t038">浴室 1620</li><li data-i18n="t039">天井高 約2.6m</li><li data-i18n="t040">バルコニー 13.34㎡</li><li data-i18n="t041">トランクルーム 1.50㎡</li><li data-i18n="t042">専有防災倉庫 0.93㎡</li>
         </ul>
       </div>
     </div>
@@ -353,14 +363,14 @@ figcaption .d{display:none}
   <div class="wrap">
     <div class="head rv">
       <p class="no">03 — View</p>
-      <h2>44階、南西の眺望</h2>
-      <p class="lead">正面にレインボーブリッジ、<br class="sp">足元には東京湾の青。<br>夕刻には海と空が<br class="sp">茜色から群青へ染まります。<br>西ウイングの南西向き住戸<br class="sp">ならではの水辺のパノラマです。</p>
+      <h2 data-i18n="t043">44階、南西の眺望</h2>
+      <p class="lead" data-i18n="t044">正面にレインボーブリッジ、<br class="sp">足元には東京湾の青。<br>夕刻には海と空が<br class="sp">茜色から群青へ染まります。<br>西ウイングの南西向き住戸<br class="sp">ならではの水辺のパノラマです。</p>
     </div>
   </div>
   <div class="wrap">
     <div class="stack">
-      <figure class="full rv zoom"><img src="img/u26_view_day_ai.jpg" width="1800" height="900" loading="lazy" alt="昼の眺望（イメージ）"><figcaption><span class="t">昼の眺望（イメージ）</span><span class="d">　下の眺望CGをもとにしたAI生成イメージ</span></figcaption></figure>
-      <figure class="full rv zoom"><img src="img/u27_view_dusk_cg.jpg" width="1800" height="900" loading="lazy" alt="夜景の眺望（イメージ）"><figcaption><span class="t">夜景の眺望（イメージ）</span><span class="d">　レインボーブリッジと都心の夜景・眺望CG</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/u26_view_day_ai.jpg" width="1800" height="900" loading="lazy" alt="昼の眺望（イメージ）"><figcaption><span class="t" data-i18n="t045">昼の眺望（イメージ）</span><span class="d" data-i18n="t046">　下の眺望CGをもとにしたAI生成イメージ</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/u27_view_dusk_cg.jpg" width="1800" height="900" loading="lazy" alt="夜景の眺望（イメージ）"><figcaption><span class="t" data-i18n="t047">夜景の眺望（イメージ）</span><span class="d" data-i18n="t048">　レインボーブリッジと都心の夜景・眺望CG</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -370,12 +380,12 @@ figcaption .d{display:none}
   <div class="wrap">
     <div class="head rv">
       <p class="no">04 — Living Dining</p>
-      <h2>海を正面に、<br>約29.4帖のリビング</h2>
-      <p class="lead">ラウンドサッシの向こうに<br class="sp">東京湾とレインボーブリッジ。<br>イメージパースで<br class="sp">空間の雰囲気をご覧ください。</p>
+      <h2 data-i18n="t049">海を正面に、<br>約29.4帖のリビング</h2>
+      <p class="lead" data-i18n="t050">ラウンドサッシの向こうに<br class="sp">東京湾とレインボーブリッジ。<br>イメージパースで<br class="sp">空間の雰囲気をご覧ください。</p>
     </div>
     <div class="stack">
-      <figure class="full rv zoom"><img src="img/u02_ldk_ai_day.jpg" width="1800" height="1005" loading="lazy" alt="リビングダイニング 昼（イメージパース）"><figcaption><span class="t">リビングダイニング 昼（イメージパース）</span><span class="d">　AI生成・家具と内装はイメージです</span></figcaption></figure>
-      <figure class="full rv zoom"><img src="img/u01_ldk_ai_bridge.jpg" width="1800" height="1005" loading="lazy" alt="リビングダイニング 夕景（イメージパース）"><figcaption><span class="t">リビングダイニング 夕景（イメージパース）</span><span class="d">　AI生成・家具と内装はイメージです</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/u02_ldk_ai_day.jpg" width="1800" height="1005" loading="lazy" alt="リビングダイニング 昼（イメージパース）"><figcaption><span class="t" data-i18n="t051">リビングダイニング 昼（イメージパース）</span><span class="d" data-i18n="t052">　AI生成・家具と内装はイメージです</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/u01_ldk_ai_bridge.jpg" width="1800" height="1005" loading="lazy" alt="リビングダイニング 夕景（イメージパース）"><figcaption><span class="t" data-i18n="t053">リビングダイニング 夕景（イメージパース）</span><span class="d" data-i18n="t052">　AI生成・家具と内装はイメージです</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -385,28 +395,28 @@ figcaption .d{display:none}
   <video class="lazy" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_entrance.jpg" data-webm="video/loop_entrance.webm" data-mp4="video/loop_entrance.mp4"></video>
   <div class="cap">
     <p class="no">05 — Entrance &amp; Residence</p>
-    <h2>水辺に立ち上がる、<br>2棟のタワー</h2>
-    <p>浜離宮の緑の先に、金色の帯をまとう2棟。波と緑をモチーフにした3階建の基壇部が両棟を結び、3階のエントランスホールにはコンシェルジュカウンター。</p>
+    <h2 data-i18n="t054">水辺に立ち上がる、<br>2棟のタワー</h2>
+    <p data-i18n="t055">浜離宮の緑の先に、金色の帯をまとう2棟。波と緑をモチーフにした3階建の基壇部が両棟を結び、3階のエントランスホールにはコンシェルジュカウンター。</p>
   </div>
 </section>
 <section style="padding-top:56px">
   <div class="wrap">
     <div class="stack">
-      <figure class="full rv zoom"><img src="img/r01b_ext_day.jpg" width="1600" height="800" loading="lazy" alt="外観"><figcaption><span class="t">外観</span><span class="d">　地上53階建・総戸数2,046戸（AI生成イメージ）</span></figcaption></figure>
-      <figure class="full rv zoom"><img src="img/r03_approach.jpg" width="1600" height="800" loading="lazy" alt="エントランスアプローチ"><figcaption><span class="t">エントランスアプローチ</span><span class="d">　曲面のキャノピー</span></figcaption></figure>
-      <figure class="full rv zoom"><img src="img/r06_escalator.jpg" width="1600" height="1320" loading="lazy" alt="エントランスのエスカレーター"><figcaption><span class="t">エントランスのエスカレーター</span><span class="d">　曲線の壁と間接照明に導かれて3階へ</span></figcaption></figure>
-      <figure class="full rv zoom"><img src="img/c14_concierge.jpg" width="1600" height="1061" loading="lazy" alt="3F エントランスホール"><figcaption><span class="t">3F エントランスホール</span><span class="d">　コンシェルジュカウンター</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/r01b_ext_day.jpg" width="1600" height="800" loading="lazy" alt="外観"><figcaption><span class="t" data-i18n="t056">外観</span><span class="d" data-i18n="t057">　地上53階建・総戸数2,046戸（AI生成イメージ）</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/r03_approach.jpg" width="1600" height="800" loading="lazy" alt="エントランスアプローチ"><figcaption><span class="t" data-i18n="t058">エントランスアプローチ</span><span class="d" data-i18n="t059">　曲面のキャノピー</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/r06_escalator.jpg" width="1600" height="1320" loading="lazy" alt="エントランスのエスカレーター"><figcaption><span class="t" data-i18n="t060">エントランスのエスカレーター</span><span class="d" data-i18n="t061">　曲線の壁と間接照明に導かれて3階へ</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/c14_concierge.jpg" width="1600" height="1061" loading="lazy" alt="3F エントランスホール"><figcaption><span class="t" data-i18n="t062">3F エントランスホール</span><span class="d" data-i18n="t063">　コンシェルジュカウンター</span></figcaption></figure>
       <div class="grid grid-2 rv">
-        <figure class="zoom"><img src="img/c15_ev_hall.jpg" width="1600" height="1440" loading="lazy" alt="エレベーターホール"><figcaption><span class="t">エレベーターホール</span><span class="d">　カーペットの色で行き先フロアを分ける</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c16_corridor.jpg" width="1600" height="1440" loading="lazy" alt="内廊下"><figcaption><span class="t">内廊下</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c15_ev_hall.jpg" width="1600" height="1440" loading="lazy" alt="エレベーターホール"><figcaption><span class="t" data-i18n="t064">エレベーターホール</span><span class="d" data-i18n="t065">　カーペットの色で行き先フロアを分ける</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c16_corridor.jpg" width="1600" height="1440" loading="lazy" alt="内廊下"><figcaption><span class="t" data-i18n="t066">内廊下</span></figcaption></figure>
       </div>
       <div class="grid grid-2 offset rv">
-        <figure class="zoom"><img class="ar-3-4" src="img/r02_facade.jpg" width="1371" height="1600" loading="lazy" alt="外観"><figcaption><span class="t">外観</span><span class="d">　ラウンドしたバルコニーのファサード（AI生成イメージ）</span></figcaption></figure>
-        <figure class="zoom"><img class="ar-3-4" src="img/r04_entrance_night.jpg" width="1600" height="800" loading="lazy" alt="エントランス 夜景"><figcaption><span class="t">エントランス 夜景</span></figcaption></figure>
+        <figure class="zoom"><img class="ar-3-4" src="img/r02_facade.jpg" width="1371" height="1600" loading="lazy" alt="外観"><figcaption><span class="t" data-i18n="t056">外観</span><span class="d" data-i18n="t067">　ラウンドしたバルコニーのファサード（AI生成イメージ）</span></figcaption></figure>
+        <figure class="zoom"><img class="ar-3-4" src="img/r04_entrance_night.jpg" width="1600" height="800" loading="lazy" alt="エントランス 夜景"><figcaption><span class="t" data-i18n="t068">エントランス 夜景</span></figcaption></figure>
       </div>
       <div class="grid grid-2 rv">
-        <figure class="zoom"><img src="img/r08_garden.jpg" width="1600" height="800" loading="lazy" alt="グリーンヒル"><figcaption><span class="t">グリーンヒル</span><span class="d">　芝生の広場</span></figcaption></figure>
-        <figure class="zoom"><img src="img/r09_terrace_night.jpg" width="1600" height="800" loading="lazy" alt="テラス 夜景"><figcaption><span class="t">テラス 夜景</span></figcaption></figure>
+        <figure class="zoom"><img src="img/r08_garden.jpg" width="1600" height="800" loading="lazy" alt="グリーンヒル"><figcaption><span class="t" data-i18n="t069">グリーンヒル</span><span class="d" data-i18n="t070">　芝生の広場</span></figcaption></figure>
+        <figure class="zoom"><img src="img/r09_terrace_night.jpg" width="1600" height="800" loading="lazy" alt="テラス 夜景"><figcaption><span class="t" data-i18n="t071">テラス 夜景</span></figcaption></figure>
       </div>
     </div>
   </div>
@@ -417,8 +427,8 @@ figcaption .d{display:none}
   <video class="lazy" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_movie.jpg" data-webm="video/loop_movie.webm" data-mp4="video/loop_movie.mp4"></video>
   <div class="cap">
     <p class="no">06 — Movie</p>
-    <h2>海と空に浮かぶ、<br>53階建ツインタワー</h2>
-    <p>総戸数2,046戸、地上53階建。東京湾の水面の先に立ち上がる2棟のタワーと、曲線で描かれたエントランス（コンセプトムービーより）。</p>
+    <h2 data-i18n="t072">海と空に浮かぶ、<br>53階建ツインタワー</h2>
+    <p data-i18n="t073">総戸数2,046戸、地上53階建。東京湾の水面の先に立ち上がる2棟のタワーと、曲線で描かれたエントランス（コンセプトムービーより）。</p>
   </div>
 </section>
 
@@ -427,41 +437,41 @@ figcaption .d{display:none}
   <video class="lazy pan-rl" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_sky.jpg" data-webm="video/loop_sky.webm" data-mp4="video/loop_sky.mp4"></video>
   <div class="cap">
     <p class="no">07 — Common Space</p>
-    <h2>ホテルのような、<br>ラグジュアリーな共用空間</h2>
-    <p>東京タワーを望む51階のスカイスパ、2層吹抜けのスカイラウンジ、ゲストルームにラウンジやテラス。暮らしの延長にある、上質なもてなしの空間。</p>
+    <h2 data-i18n="t074">ホテルのような、<br>ラグジュアリーな共用空間</h2>
+    <p data-i18n="t075">東京タワーを望む51階のスカイスパ、2層吹抜けのスカイラウンジ、ゲストルームにラウンジやテラス。暮らしの延長にある、上質なもてなしの空間。</p>
   </div>
 </section>
 <section style="padding-top:56px">
   <div class="wrap">
     <ul class="floors rv">
-      <li data-f="51"><div class="f">51・52F</div><div class="n"><span>スカイラウンジ</span><span>スカイパーティーラウンジ</span><span>スカイスパゲスト</span></div><div class="d">2層吹抜けのラウンジ、オープンデッキ、サウナ付きゲストルーム</div></li>
-      <li data-f="3"><div class="f">3F</div><div class="n"><span>ウエスト／イーストラウンジ</span><span>オープンテラス・ライブラリー</span><span>フィットネス・ゴルフレンジ</span></div><div class="d">個室ブース、プレイルーム、5つのゲストルーム、コンシェルジュ、コンビニ</div></li>
-      <li data-f="2"><div class="f">2F</div><div class="n"><span>ファミリーパーティールーム</span><span>キッズスペース</span><span>ミュージックスタジオ</span></div><div class="d">24時間ランドリー、保育園</div></li>
+      <li data-f="51"><div class="f">51・52F</div><div class="n"><span data-i18n="t076">スカイラウンジ</span><span data-i18n="t077">スカイパーティーラウンジ</span><span data-i18n="t078">スカイスパゲスト</span></div><div class="d" data-i18n="t079">2層吹抜けのラウンジ、オープンデッキ、サウナ付きゲストルーム</div></li>
+      <li data-f="3"><div class="f">3F</div><div class="n"><span data-i18n="t080">ウエスト／イーストラウンジ</span><span data-i18n="t081">オープンテラス・ライブラリー</span><span data-i18n="x009">フィットネス・ゴルフレンジ</span></div><div class="d" data-i18n="t082">個室ブース、プレイルーム、5つのゲストルーム、コンシェルジュ、コンビニ</div></li>
+      <li data-f="2"><div class="f">2F</div><div class="n"><span data-i18n="t083">ファミリーパーティールーム</span><span data-i18n="t084">キッズスペース</span><span data-i18n="x010">ミュージックスタジオ</span></div><div class="d" data-i18n="t085">24時間ランドリー、保育園</div></li>
     </ul>
     <div class="stack">
-      <figure class="full rv zoom"><img src="img/c01_sky_lounge.jpg" width="1600" height="800" loading="lazy" alt="51・52F スカイラウンジ"><figcaption><span class="t">51・52F スカイラウンジ</span><span class="d">　2層吹抜け、バーカウンター付き</span></figcaption></figure>
-      <figure class="full rv zoom"><img src="img/c21_sky_bar.jpg" width="1600" height="985" loading="lazy" alt="スカイラウンジ バー"><figcaption><span class="t">スカイラウンジ バー</span><span class="d">　曲線のカウンターと間接照明</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/c01_sky_lounge.jpg" width="1600" height="800" loading="lazy" alt="51・52F スカイラウンジ"><figcaption><span class="t" data-i18n="t086">51・52F スカイラウンジ</span><span class="d" data-i18n="t087">　2層吹抜け、バーカウンター付き</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/c21_sky_bar.jpg" width="1600" height="985" loading="lazy" alt="スカイラウンジ バー"><figcaption><span class="t" data-i18n="t088">スカイラウンジ バー</span><span class="d" data-i18n="t089">　曲線のカウンターと間接照明</span></figcaption></figure>
       <div class="grid grid-2 rv">
-        <figure class="zoom"><img src="img/c19_sky_lounge_ext.jpg" width="1600" height="961" loading="lazy" alt="スカイラウンジ 外観"><figcaption><span class="t">スカイラウンジ 外観</span><span class="d">　2層吹抜けのガラス越しに</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c20_sky_lounge_sofa.jpg" width="1600" height="1059" loading="lazy" alt="スカイラウンジ ソファ席"><figcaption><span class="t">スカイラウンジ ソファ席</span><span class="d">　窓辺のラウンジチェア</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c19_sky_lounge_ext.jpg" width="1600" height="961" loading="lazy" alt="スカイラウンジ 外観"><figcaption><span class="t" data-i18n="t090">スカイラウンジ 外観</span><span class="d" data-i18n="t091">　2層吹抜けのガラス越しに</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c20_sky_lounge_sofa.jpg" width="1600" height="1059" loading="lazy" alt="スカイラウンジ ソファ席"><figcaption><span class="t" data-i18n="t092">スカイラウンジ ソファ席</span><span class="d" data-i18n="t093">　窓辺のラウンジチェア</span></figcaption></figure>
       </div>
       <div class="grid grid-2 rv">
-        <figure class="zoom"><img src="img/c02_sky_spa.jpg" width="1600" height="1120" loading="lazy" alt="51F スカイスパゲスト"><figcaption><span class="t">51F スカイスパゲスト</span><span class="d">　サウナとバルコニー付きのゲストルーム</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c03_west_lounge.jpg" width="1600" height="975" loading="lazy" alt="3F ウエストラウンジ"><figcaption><span class="t">3F ウエストラウンジ</span><span class="d">　個室・半個室・オープン席</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c04_terrace.jpg" width="1600" height="1069" loading="lazy" alt="3F オープンテラス"><figcaption><span class="t">3F オープンテラス</span><span class="d">　水辺を間近に見る屋根付きテラス</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c08_library.jpg" width="1600" height="1290" loading="lazy" alt="3F ライブラリー"><figcaption><span class="t">3F ライブラリー</span><span class="d">　吹抜けの書架</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c02_sky_spa.jpg" width="1600" height="1120" loading="lazy" alt="51F スカイスパゲスト"><figcaption><span class="t" data-i18n="t094">51F スカイスパゲスト</span><span class="d" data-i18n="t095">　サウナとバルコニー付きのゲストルーム</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c03_west_lounge.jpg" width="1600" height="975" loading="lazy" alt="3F ウエストラウンジ"><figcaption><span class="t" data-i18n="t096">3F ウエストラウンジ</span><span class="d" data-i18n="t097">　個室・半個室・オープン席</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c04_terrace.jpg" width="1600" height="1069" loading="lazy" alt="3F オープンテラス"><figcaption><span class="t" data-i18n="t098">3F オープンテラス</span><span class="d" data-i18n="t099">　水辺を間近に見る屋根付きテラス</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c08_library.jpg" width="1600" height="1290" loading="lazy" alt="3F ライブラリー"><figcaption><span class="t" data-i18n="t100">3F ライブラリー</span><span class="d" data-i18n="t101">　吹抜けの書架</span></figcaption></figure>
       </div>
       <div class="grid grid-2 rv">
-        <figure class="zoom"><img src="img/c05_terrace_evening.jpg" width="1600" height="977" loading="lazy" alt="3F オープンテラス 夕景"><figcaption><span class="t">3F オープンテラス 夕景</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c06_fitness.jpg" width="1600" height="1092" loading="lazy" alt="3F フィットネスルーム"><figcaption><span class="t">3F フィットネスルーム</span><span class="d">　海を見ながらトレーニング</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c07_golf.jpg" width="1600" height="1067" loading="lazy" alt="3F ゴルフレンジ"><figcaption><span class="t">3F ゴルフレンジ</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c09_play.jpg" width="1600" height="1067" loading="lazy" alt="3F プレイルーム"><figcaption><span class="t">3F プレイルーム</span><span class="d">　ビリヤード・ダーツ</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c05_terrace_evening.jpg" width="1600" height="977" loading="lazy" alt="3F オープンテラス 夕景"><figcaption><span class="t" data-i18n="t102">3F オープンテラス 夕景</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c06_fitness.jpg" width="1600" height="1092" loading="lazy" alt="3F フィットネスルーム"><figcaption><span class="t" data-i18n="t103">3F フィットネスルーム</span><span class="d" data-i18n="t104">　海を見ながらトレーニング</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c07_golf.jpg" width="1600" height="1067" loading="lazy" alt="3F ゴルフレンジ"><figcaption><span class="t" data-i18n="t105">3F ゴルフレンジ</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c09_play.jpg" width="1600" height="1067" loading="lazy" alt="3F プレイルーム"><figcaption><span class="t" data-i18n="t106">3F プレイルーム</span><span class="d" data-i18n="t107">　ビリヤード・ダーツ</span></figcaption></figure>
       </div>
       <div class="grid grid-2 rv">
-        <figure class="zoom"><img src="img/c10_east_lounge.jpg" width="1600" height="1148" loading="lazy" alt="3F イーストラウンジ"><figcaption><span class="t">3F イーストラウンジ</span><span class="d">　ミーティングにも使えるブース席</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c11_guest_cave.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t">3F ゲストルーム</span><span class="d">　海辺のケーブハウス</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c12_guest_iki.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t">3F ゲストルーム</span><span class="d">　海辺の和旅館</span></figcaption></figure>
-        <figure class="zoom"><img src="img/c13_guest_glamping.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t">3F ゲストルーム</span><span class="d">　海辺のキャンプ</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c10_east_lounge.jpg" width="1600" height="1148" loading="lazy" alt="3F イーストラウンジ"><figcaption><span class="t" data-i18n="t108">3F イーストラウンジ</span><span class="d" data-i18n="t109">　ミーティングにも使えるブース席</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c11_guest_cave.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t" data-i18n="t110">3F ゲストルーム</span><span class="d" data-i18n="t111">　海辺のケーブハウス</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c12_guest_iki.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t" data-i18n="t110">3F ゲストルーム</span><span class="d" data-i18n="t112">　海辺の和旅館</span></figcaption></figure>
+        <figure class="zoom"><img src="img/c13_guest_glamping.jpg" width="1600" height="1100" loading="lazy" alt="3F ゲストルーム"><figcaption><span class="t" data-i18n="t110">3F ゲストルーム</span><span class="d" data-i18n="t113">　海辺のキャンプ</span></figcaption></figure>
       </div>
     </div>
   </div>
@@ -472,18 +482,18 @@ figcaption .d{display:none}
   <div class="wrap">
     <div class="head rv">
       <p class="no">08 — Location</p>
-      <h2>勝どき駅徒歩10分、<br>海を目の前にする豊海</h2>
-      <p class="lead">銀座まで約1.8km。<br class="sp">隣には小学校と運動公園、<br class="sp">対岸には浜離宮と築地。<br>都心を使いこなしながら、<br class="sp">水辺の開放感を日常にする<br class="sp">中央区アドレスです。</p>
+      <h2 data-i18n="t114">勝どき駅徒歩10分、<br>海を目の前にする豊海</h2>
+      <p class="lead" data-i18n="t115">銀座まで約1.8km。<br class="sp">隣には小学校と運動公園、<br class="sp">対岸には浜離宮と築地。<br>都心を使いこなしながら、<br class="sp">水辺の開放感を日常にする<br class="sp">中央区アドレスです。</p>
     </div>
     <div class="stack">
-      <figure class="full rv zoom"><img src="img/l01_aerial.jpg" width="1600" height="800" loading="lazy" alt="豊海・勝どきの空撮"><figcaption><span class="t">豊海・勝どきの空撮</span><span class="d">　完成予想CGを合成</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/l01_aerial.jpg" width="1600" height="800" loading="lazy" alt="豊海・勝どきの空撮"><figcaption><span class="t" data-i18n="t116">豊海・勝どきの空撮</span><span class="d" data-i18n="t117">　完成予想CGを合成</span></figcaption></figure>
       <div class="grid grid-2 grid-d3 rv">
-        <figure class="zoom"><img src="img/l02_site.jpg" width="1600" height="1062" loading="lazy" alt="現地周辺の水辺"><figcaption><span class="t">現地周辺の水辺</span><span class="d">　徒歩5分</span></figcaption></figure>
-        <figure class="zoom"><img src="img/l04_kachidoki_bridge.jpg" width="1600" height="916" loading="lazy" alt="勝鬨橋と隅田川テラス"><figcaption><span class="t">勝鬨橋と隅田川テラス</span><span class="d">　徒歩11分</span></figcaption></figure>
-        <figure class="zoom"><img src="img/l03_hamarikyu.jpg" width="1500" height="1000" loading="lazy" alt="浜離宮恩賜庭園"><figcaption><span class="t">浜離宮恩賜庭園</span><span class="d">　約1,680m（AI生成イメージ）</span></figcaption></figure>
-        <figure class="zoom"><img src="img/l05_park.jpg" width="960" height="630" loading="lazy" alt="中央区立豊海運動公園"><figcaption><span class="t">中央区立豊海運動公園</span><span class="d">　徒歩2分</span></figcaption></figure>
-        <figure class="zoom"><img src="img/l07_kachidoki_mid.jpg" width="960" height="630" loading="lazy" alt="パークタワー勝どきミッド 商業フロア"><figcaption><span class="t">パークタワー勝どきミッド</span><span class="d">　商業フロア・徒歩9分</span></figcaption></figure>
-        <figure class="zoom"><img src="img/l06_ginza.jpg" width="1600" height="867" loading="lazy" alt="銀座"><figcaption><span class="t">銀座</span><span class="d">　約1.8km</span></figcaption></figure>
+        <figure class="zoom"><img src="img/l02_site.jpg" width="1600" height="1062" loading="lazy" alt="現地周辺の水辺"><figcaption><span class="t" data-i18n="t118">現地周辺の水辺</span><span class="d" data-i18n="t119">　徒歩5分</span></figcaption></figure>
+        <figure class="zoom"><img src="img/l04_kachidoki_bridge.jpg" width="1600" height="916" loading="lazy" alt="勝鬨橋と隅田川テラス"><figcaption><span class="t" data-i18n="t120">勝鬨橋と隅田川テラス</span><span class="d" data-i18n="t121">　徒歩11分</span></figcaption></figure>
+        <figure class="zoom"><img src="img/l03_hamarikyu.jpg" width="1500" height="1000" loading="lazy" alt="浜離宮恩賜庭園"><figcaption><span class="t" data-i18n="t122">浜離宮恩賜庭園</span><span class="d" data-i18n="t123">　約1,680m（AI生成イメージ）</span></figcaption></figure>
+        <figure class="zoom"><img src="img/l05_park.jpg" width="960" height="630" loading="lazy" alt="中央区立豊海運動公園"><figcaption><span class="t" data-i18n="t124">中央区立豊海運動公園</span><span class="d" data-i18n="t125">　徒歩2分</span></figcaption></figure>
+        <figure class="zoom"><img src="img/l07_kachidoki_mid.jpg" width="960" height="630" loading="lazy" alt="パークタワー勝どきミッド 商業フロア"><figcaption><span class="t" data-i18n="t126">パークタワー勝どきミッド</span><span class="d" data-i18n="t127">　商業フロア・徒歩9分</span></figcaption></figure>
+        <figure class="zoom"><img src="img/l06_ginza.jpg" width="1600" height="867" loading="lazy" alt="銀座"><figcaption><span class="t" data-i18n="t128">銀座</span><span class="d" data-i18n="t129">　約1.8km</span></figcaption></figure>
       </div>
     </div>
   </div>
@@ -494,27 +504,27 @@ figcaption .d{display:none}
   <img class="bg" src="img/l08_aerial_night.jpg" width="1600" height="912" loading="lazy" alt="">
   <div class="cap">
     <p class="no">09 — Future of Tsukiji</p>
-    <h2>対岸の築地が、<br>生まれ変わる</h2>
-    <p>築地地区まちづくり事業。約5万人収容のマルチスタジアムと約10haの水辺空間が、2030年代前半のまちびらきへ。</p>
+    <h2 data-i18n="t130">対岸の築地が、<br>生まれ変わる</h2>
+    <p data-i18n="t131">築地地区まちづくり事業。約5万人収容のマルチスタジアムと約10haの水辺空間が、2030年代前半のまちびらきへ。</p>
   </div>
 </section>
 <section style="padding-top:56px">
   <div class="wrap">
     <div class="stack">
-      <figure class="full rv zoom"><img src="img/f01_tsukiji_main.jpg" width="1600" height="907" loading="lazy" alt="築地地区まちづくり事業 完成予想CG"><figcaption><span class="t">築地地区まちづくり事業 完成予想CG</span><span class="d">　現地から徒歩13分・約980m</span></figcaption></figure>
+      <figure class="full rv zoom"><img src="img/f01_tsukiji_main.jpg" width="1600" height="907" loading="lazy" alt="築地地区まちづくり事業 完成予想CG"><figcaption><span class="t" data-i18n="t132">築地地区まちづくり事業 完成予想CG</span><span class="d" data-i18n="t133">　現地から徒歩13分・約980m</span></figcaption></figure>
       <div class="grid grid-d2 rv">
-        <figure class="zoom"><img src="img/f02_tsukiji_stadium.jpg" width="1400" height="700" loading="lazy" alt="マルチスタジアム"><figcaption><span class="t">マルチスタジアム</span><span class="d">　約5万人収容・屋内全天候型</span></figcaption></figure>
-        <figure class="zoom"><img src="img/f03_tsukiji_water.jpg" width="1400" height="770" loading="lazy" alt="水辺のオープンスペース"><figcaption><span class="t">水辺のオープンスペース</span><span class="d">　合計約10ha</span></figcaption></figure>
+        <figure class="zoom"><img src="img/f02_tsukiji_stadium.jpg" width="1400" height="700" loading="lazy" alt="マルチスタジアム"><figcaption><span class="t" data-i18n="t134">マルチスタジアム</span><span class="d" data-i18n="t135">　約5万人収容・屋内全天候型</span></figcaption></figure>
+        <figure class="zoom"><img src="img/f03_tsukiji_water.jpg" width="1400" height="770" loading="lazy" alt="水辺のオープンスペース"><figcaption><span class="t" data-i18n="t136">水辺のオープンスペース</span><span class="d" data-i18n="t137">　合計約10ha</span></figcaption></figure>
       </div>
       <ul class="tl rv">
-        <li><div class="y">2026年11月</div><div class="t">本物件 竣工予定</div><div class="d">ザ 豊海タワー マリン＆スカイ</div></li>
-        <li><div class="y">2027年8月</div><div class="t">本住戸 引渡予定</div><div class="d">W4416号室</div></li>
-        <li><div class="y">進行中</div><div class="t">勝どき・晴海の再開発</div><div class="d">勝どき東地区、晴海五丁目西地区ほか</div></li>
-        <li><div class="y">2030年代前半</div><div class="t">築地地区 まちびらき予定</div><div class="d">マルチスタジアム・MICE・水辺空間</div></li>
+        <li><div class="y">2026年11月</div><div class="t">本物件 竣工予定</div><div class="d" data-i18n="t003">ザ 豊海タワー マリン＆スカイ</div></li>
+        <li><div class="y">2027年8月</div><div class="t">本住戸 引渡予定</div><div class="d" data-i18n="t138">W4416号室</div></li>
+        <li><div class="y">進行中</div><div class="t" data-i18n="x011">勝どき・晴海の再開発</div><div class="d" data-i18n="t139">勝どき東地区、晴海五丁目西地区ほか</div></li>
+        <li><div class="y">2030年代前半</div><div class="t" data-i18n="x012">築地地区 まちびらき予定</div><div class="d" data-i18n="t140">マルチスタジアム・MICE・水辺空間</div></li>
       </ul>
-      <figure class="rv fig-w"><img src="img/f06_develop_map.jpg" width="1600" height="1373" loading="lazy" alt="周辺の再開発概念図"><figcaption><span class="t">周辺の再開発概念図</span><span class="d">　出典：公式サイト</span></figcaption></figure>
+      <figure class="rv fig-w"><img src="img/f06_develop_map.jpg" width="1600" height="1373" loading="lazy" alt="周辺の再開発概念図"><figcaption><span class="t" data-i18n="t141">周辺の再開発概念図</span><span class="d" data-i18n="t142">　出典：公式サイト</span></figcaption></figure>
     </div>
-    <p class="note dk">※再開発の内容・時期は計画段階のもので、今後変更となる場合があります。</p>
+    <p class="note dk" data-i18n="t143">※再開発の内容・時期は計画段階のもので、今後変更となる場合があります。</p>
   </div>
 </section>
 
@@ -523,23 +533,23 @@ figcaption .d{display:none}
   <div class="wrap">
     <div class="head rv">
       <p class="no">10 — Access</p>
-      <h2>「勝どき」駅から</h2>
-      <p class="lead">都営大江戸線で汐留・六本木へ直通。<br>徒歩3分のバス停、<br class="sp">徒歩6分の東京BRTも選べます。</p>
+      <h2 data-i18n="t144">「勝どき」駅から</h2>
+      <p class="lead" data-i18n="t145">都営大江戸線で汐留・六本木へ直通。<br>徒歩3分のバス停、<br class="sp">徒歩6分の東京BRTも選べます。</p>
     </div>
     <ul class="times rv">
-      <li><div class="to">「汐留」駅</div><div class="m">5<small>分</small></div></li>
-      <li><div class="to">「銀座一丁目」駅</div><div class="m">8<small>分</small></div></li>
-      <li><div class="to">「有楽町」駅</div><div class="m">10<small>分</small></div></li>
-      <li><div class="to">「六本木」駅</div><div class="m">14<small>分</small></div></li>
-      <li><div class="to">「東京」駅</div><div class="m">19<small>分</small></div></li>
-      <li><div class="to">勝どき駅前 <small>バス</small></div><div class="m">5<small>分</small></div></li>
-      <li><div class="to">銀座四丁目 <small>バス</small></div><div class="m">16<small>分</small></div></li>
-      <li><div class="to">東京駅丸の内南口 <small>バス</small></div><div class="m">25<small>分</small></div></li>
+      <li><div class="to" data-i18n="x001">「汐留」駅</div><div class="m">5<small data-i18n="t017">分</small></div></li>
+      <li><div class="to" data-i18n="x002">「銀座一丁目」駅</div><div class="m">8<small data-i18n="t017">分</small></div></li>
+      <li><div class="to" data-i18n="x003">「有楽町」駅</div><div class="m" data-i18n="t016">10<small data-i18n="t017">分</small></div></li>
+      <li><div class="to" data-i18n="x004">「六本木」駅</div><div class="m">14<small data-i18n="t017">分</small></div></li>
+      <li><div class="to" data-i18n="x005">「東京」駅</div><div class="m">19<small data-i18n="t017">分</small></div></li>
+      <li><div class="to" data-i18n="x006">勝どき駅前 <small data-i18n="t146">バス</small></div><div class="m">5<small data-i18n="t017">分</small></div></li>
+      <li><div class="to" data-i18n="x007">銀座四丁目 <small data-i18n="t146">バス</small></div><div class="m">16<small data-i18n="t017">分</small></div></li>
+      <li><div class="to" data-i18n="x008">東京駅丸の内南口 <small data-i18n="t146">バス</small></div><div class="m">25<small data-i18n="t017">分</small></div></li>
     </ul>
-    <p class="note dk">※電車の所要時間は「勝どき」駅からの通勤時のもので、乗り換え・待ち時間を含みます（出典：公式サイト）。バスは徒歩3分の「山九本社前」等のバス停から平日7:30〜9:00着の所要時間（Yahoo!路線情報、2024年8月時点）。東京BRT「勝どきBRT」停留所は徒歩6分。車は環状2号線で築地・新橋・虎ノ門へ。</p>
+    <p class="note dk" data-i18n="t147">※電車の所要時間は「勝どき」駅からの通勤時のもので、乗り換え・待ち時間を含みます（出典：公式サイト）。バスは徒歩3分の「山九本社前」等のバス停から平日7:30〜9:00着の所要時間（Yahoo!路線情報、2024年8月時点）。東京BRT「勝どきBRT」停留所は徒歩6分。車は環状2号線で築地・新橋・虎ノ門へ。</p>
     <div class="maps rv">
-      <figure><img src="img/a03_route_map.png" width="1400" height="943" loading="lazy" alt="路線図"><figcaption><span class="t">路線図</span><span class="d">　勝どき駅から主要駅へ</span></figcaption></figure>
-      <figure><img src="img/a01_bus_map.jpg" width="1600" height="1520" loading="lazy" alt="バス路線図"><figcaption><span class="t">バス路線</span><span class="d">　銀座・東京駅方面</span></figcaption></figure>
+      <figure><img src="img/a03_route_map.png" width="1400" height="943" loading="lazy" alt="路線図"><figcaption><span class="t" data-i18n="t148">路線図</span><span class="d" data-i18n="t149">　勝どき駅から主要駅へ</span></figcaption></figure>
+      <figure><img src="img/a01_bus_map.jpg" width="1600" height="1520" loading="lazy" alt="バス路線図"><figcaption><span class="t" data-i18n="t150">バス路線</span><span class="d" data-i18n="t151">　銀座・東京駅方面</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -549,37 +559,37 @@ figcaption .d{display:none}
   <div class="wrap" style="padding-top:80px">
     <div class="head rv">
       <p class="no">11 — Outline</p>
-      <h2>物件概要</h2>
+      <h2 data-i18n="t152">物件概要</h2>
     </div>
     <div class="grid grid-d2 rv" style="align-items:start">
-      <figure style="background:#fff;padding:14px;border:1px solid #e4dfd6"><img class="ar-auto" src="img/u00_plan2d.jpg" width="2313" height="1772" loading="lazy" alt="間取図"><figcaption><span class="t">間取図</span><span class="d">　2LDK＋2WIC＋SIC＋S（W-104Csw メニュープラン1）</span></figcaption></figure>
+      <figure style="background:#fff;padding:14px;border:1px solid #e4dfd6"><img class="ar-auto" src="img/u00_plan2d.jpg" width="2313" height="1772" loading="lazy" alt="間取図"><figcaption><span class="t" data-i18n="t153">間取図</span><span class="d" data-i18n="t154">　2LDK＋2WIC＋SIC＋S（W-104Csw メニュープラン1）</span></figcaption></figure>
       <div>
         <table class="tbl">
-          <tr><th>物件名</th><td>ザ 豊海タワー マリン＆スカイ　W4416号室</td></tr>
-          <tr><th>販売価格</th><td><b>3億9,500万円</b>（税込）</td></tr>
-          <tr><th>所在地</th><td>東京都中央区豊海町41番（地番）</td></tr>
-          <tr><th>交通</th><td>都営大江戸線「勝どき」駅 徒歩10分</td></tr>
-          <tr><th>所在階 / 向き</th><td>西ウイング 44階 ／ 南西向き</td></tr>
-          <tr><th>間取り</th><td>2LDK＋2WIC＋SIC＋納戸（W-104Cswタイプ・メニュープラン1）</td></tr>
-          <tr><th>契約面積</th><td>106.82㎡<br>※壁芯104.39㎡＋トランクルーム1.50㎡＋専有防災倉庫0.93㎡</td></tr>
-          <tr><th>バルコニー</th><td>13.34㎡</td></tr>
-          <tr><th>付帯</th><td>トランクルーム 1.50㎡ ／ 専有防災倉庫 0.93㎡</td></tr>
-          <tr><th>天井高</th><td>LD・主寝室 約2.6m（下り天井・梁下部分を除く）</td></tr>
-          <tr><th>眺望</th><td>東京湾・レインボーブリッジ・<br>南西方向</td></tr>
-          <tr><th>駐車場</th><td>敷地内 機械式650台・平面18台（抽選・別途契約）</td></tr>
-          <tr><th>構造・規模</th><td>鉄筋コンクリート造一部鉄骨造 地上53階地下1階建（制震・制振構造）</td></tr>
-          <tr><th>総戸数</th><td>2,046戸</td></tr>
-          <tr><th>竣工・引渡</th><td>2026年11月下旬 竣工予定 ／ 2027年8月 引渡予定</td></tr>
-          <tr><th>管理費</th><td>42,520円／月</td></tr>
-          <tr><th>修繕積立金</th><td>18,480円／月</td></tr>
-          <tr><th>その他費用</th><td>インターネット等使用料 715円／月、修繕積立基金 1,848,000円（引渡時）</td></tr>
-          <tr><th>敷地の権利</th><td>所有権</td></tr>
-          <tr><th>用途地域</th><td>準工業地域</td></tr>
-          <tr><th>施工・管理</th><td>施工 清水建設株式会社 ／ 管理 三井不動産レジデンシャルサービス株式会社（常駐）</td></tr>
+          <tr><th data-i18n="t155">物件名</th><td data-i18n="t156">ザ 豊海タワー マリン＆スカイ　W4416号室</td></tr>
+          <tr><th data-i18n="t157">販売価格</th><td data-i18n="t158"><b data-i18n="t002">3億9,500万円</b>（税込）</td></tr>
+          <tr><th data-i18n="t159">所在地</th><td data-i18n="t160">東京都中央区豊海町41番（地番）</td></tr>
+          <tr><th data-i18n="t161">交通</th><td data-i18n="t162">都営大江戸線「勝どき」駅 徒歩10分</td></tr>
+          <tr><th data-i18n="t163">所在階 / 向き</th><td data-i18n="t164">西ウイング 44階 ／ 南西向き</td></tr>
+          <tr><th data-i18n="t165">間取り</th><td data-i18n="t166">2LDK＋2WIC＋SIC＋納戸（W-104Cswタイプ・メニュープラン1）</td></tr>
+          <tr><th data-i18n="t011">契約面積</th><td data-i18n="t167">106.82㎡<br>※壁芯104.39㎡＋トランクルーム1.50㎡＋専有防災倉庫0.93㎡</td></tr>
+          <tr><th data-i18n="t168">バルコニー</th><td>13.34㎡</td></tr>
+          <tr><th data-i18n="t169">付帯</th><td data-i18n="t170">トランクルーム 1.50㎡ ／ 専有防災倉庫 0.93㎡</td></tr>
+          <tr><th data-i18n="t171">天井高</th><td data-i18n="t172">LD・主寝室 約2.6m（下り天井・梁下部分を除く）</td></tr>
+          <tr><th data-i18n="t173">眺望</th><td data-i18n="t174">東京湾・レインボーブリッジ・<br>南西方向</td></tr>
+          <tr><th data-i18n="t175">駐車場</th><td data-i18n="t176">敷地内 機械式650台・平面18台（抽選・別途契約）</td></tr>
+          <tr><th data-i18n="t177">構造・規模</th><td data-i18n="t178">鉄筋コンクリート造一部鉄骨造 地上53階地下1階建（制震・制振構造）</td></tr>
+          <tr><th data-i18n="t179">総戸数</th><td data-i18n="t180">2,046戸</td></tr>
+          <tr><th data-i18n="t181">竣工・引渡</th><td data-i18n="t182">2026年11月下旬 竣工予定 ／ 2027年8月 引渡予定</td></tr>
+          <tr><th data-i18n="t183">管理費</th><td data-i18n="t184">42,520円／月</td></tr>
+          <tr><th data-i18n="t185">修繕積立金</th><td data-i18n="t186">18,480円／月</td></tr>
+          <tr><th data-i18n="t187">その他費用</th><td data-i18n="t188">インターネット等使用料 715円／月、修繕積立基金 1,848,000円（引渡時）</td></tr>
+          <tr><th data-i18n="t189">敷地の権利</th><td data-i18n="t190">所有権</td></tr>
+          <tr><th data-i18n="t191">用途地域</th><td data-i18n="t192">準工業地域</td></tr>
+          <tr><th data-i18n="t193">施工・管理</th><td data-i18n="t194">施工 清水建設株式会社 ／ 管理 三井不動産レジデンシャルサービス株式会社（常駐）</td></tr>
         </table>
-        <p class="note">※本物件は2026年10月現在建築中です。掲載の外観・共用部・周辺の画像は完成予想CGで、実際とは異なる場合があります。眺望の写真・CGは現地相当の高さから撮影・制作したもので、本住戸からの眺望とは異なります。</p>
-        <p class="note">※管理費・修繕積立金等は分譲時の管理費等一覧表（予定）に基づく月額です。正確な金額は重要事項説明書にてご確認ください。</p>
-        <p class="note">※リビングのイメージパース、昼の眺望、外観・浜離宮の一部画像、24時間タイムラプス動画、外観・共用部の動画はAI生成（完成予想CGをもとに制作）で、家具・内装・外装の色調はイメージです。</p>
+        <p class="note" data-i18n="t195">※本物件は2026年10月現在建築中です。掲載の外観・共用部・周辺の画像は完成予想CGで、実際とは異なる場合があります。眺望の写真・CGは現地相当の高さから撮影・制作したもので、本住戸からの眺望とは異なります。</p>
+        <p class="note" data-i18n="t196">※管理費・修繕積立金等は分譲時の管理費等一覧表（予定）に基づく月額です。正確な金額は重要事項説明書にてご確認ください。</p>
+        <p class="note" data-i18n="t197">※リビングのイメージパース、昼の眺望、外観・浜離宮の一部画像、24時間タイムラプス動画、外観・共用部の動画はAI生成（完成予想CGをもとに制作）で、家具・内装・外装の色調はイメージです。</p>
       </div>
     </div>
   </div>
@@ -590,17 +600,17 @@ figcaption .d{display:none}
   <img src="img/r01_ext_dusk.jpg" width="1600" height="800" loading="lazy" alt="">
   <div class="in">
     <p class="en rv">The Toyomi Tower Marine &amp; Sky — W4416</p>
-    <h2 class="rv">海と空を、<br>日常の窓辺に。</h2>
-    <p class="p rv">販売価格<b>3億9,500万円</b></p>
+    <h2 class="rv" data-i18n="t198">海と空を、<br>日常の窓辺に。</h2>
+    <p class="p rv" data-i18n="t199">販売価格<b data-i18n="t002">3億9,500万円</b></p>
     <ul class="rv">
-      <li>西ウイング 44階</li><li>南西向き</li><li>2LDK＋2WIC＋SIC＋S</li><li>契約面積 106.82㎡</li><li>LDK 約29.4帖</li><li>2027年8月 引渡予定</li>
+      <li data-i18n="t004">西ウイング 44階</li><li data-i18n="t005">南西向き</li><li>2LDK＋2WIC＋SIC＋S</li><li data-i18n="t200">契約面積 106.82㎡</li><li data-i18n="t007">LDK 約29.4帖</li><li data-i18n="t008">2027年8月 引渡予定</li>
     </ul>
   </div>
 </section>
 
 <footer>
-  <p>※本物件は2026年10月現在建築中です。外観・共用部・周辺・築地再開発の画像は分譲事業主の完成予想CGおよび資料によるもので、実際とは異なる場合があります。眺望写真・眺望CGは現地相当の高さから撮影・制作されたもので、本住戸からの眺望とは異なります。眺望・景観は将来にわたって保証されるものではありません。</p>
-  <p>※掲載内容は2026年10月現在のものです。共用施設・サービスの内容は管理規約等に従い、変更となる場合があります。家具・調度品は販売価格に含まれません。</p>
+  <p data-i18n="t201">※本物件は2026年10月現在建築中です。外観・共用部・周辺・築地再開発の画像は分譲事業主の完成予想CGおよび資料によるもので、実際とは異なる場合があります。眺望写真・眺望CGは現地相当の高さから撮影・制作されたもので、本住戸からの眺望とは異なります。眺望・景観は将来にわたって保証されるものではありません。</p>
+  <p data-i18n="t202">※掲載内容は2026年10月現在のものです。共用施設・サービスの内容は管理規約等に従い、変更となる場合があります。家具・調度品は販売価格に含まれません。</p>
   </footer>
 
 <script>
@@ -639,6 +649,29 @@ figcaption .d{display:none}
   var kt=0; ['touchstart','touchend','click','scroll'].forEach(function(t){window.addEventListener(t,function(){var now=Date.now(); if(now-kt>800){kt=now;kick();}},{passive:true});});
   function onScroll(){bar.classList.toggle('solid',window.scrollY>window.innerHeight*0.7)}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+</script>
+
+<script>
+var I18N={"en": {"x001": "Shiodome Sta.", "x002": "Ginza-itchome Sta.", "x003": "Yurakucho Sta.", "x004": "Roppongi Sta.", "x005": "Tokyo Sta.", "x006": "Kachidoki Sta. <small>bus</small>", "x007": "Ginza 4-chome <small>bus</small>", "x008": "Tokyo Sta. Marunouchi South <small>bus</small>", "x009": "Fitness, Golf Range", "x010": "Music Studio", "x011": "Kachidoki &amp; Harumi redevelopment", "x012": "Tsukiji District, planned opening", "t030": "A rounded window wall facing Tokyo Bay wraps the living-dining room of approx. 29.4 tatami. The master bedroom and second bedroom each have a walk-in closet, and the entrance has a shoe-in closet of approx. 2.1 tatami. Ceiling height in the LD and master bedroom is approx. 2.6 m.", "t147": "* Train times are commuting-hour times from Kachidoki Station including transfers and waiting (source: official website). Bus times are from stops 3 minutes away such as Sankyu-honsha-mae, arriving on weekdays 7:30–9:00 (Yahoo! Transit, as of Aug. 2024). The Tokyo BRT Kachidoki stop is 6 minutes on foot. By car, Loop Road 2 leads to Tsukiji, Shimbashi and Toranomon.", "t201": "* This property is under construction as of October 2026. Images of the exterior, common areas, surroundings and the Tsukiji redevelopment are based on the developer's completion CGs and materials and may differ from the actual building. View photos and CGs were taken or produced from a height equivalent to the site and differ from the view from this unit. Views and scenery are not guaranteed for the future.", "t115": "About 1.8 km to Ginza. An elementary school and sports park next door, Hamarikyu and Tsukiji across the water. A Chuo-ku address that puts the openness of the waterfront into everyday life while keeping the city at hand.", "t044": "Rainbow Bridge straight ahead, the blue of Tokyo Bay below. At dusk the sea and sky turn from crimson to deep blue. A waterfront panorama unique to the southwest-facing units of the West Wing.", "t195": "* This property is under construction as of October 2026. Images of the exterior, common areas and surroundings are completion CGs and may differ from the actual building. View photos and CGs were taken or produced from a height equivalent to the site and differ from the view from this unit.", "t197": "* The living-room image perspectives, the daytime view, some exterior and Hamarikyu images, the 24-hour time-lapse videos and the exterior and common-area videos are AI-generated (based on completion CGs). Furniture, interior and exterior colors are for illustration only.", "t050": "Beyond the rounded window wall, Tokyo Bay and Rainbow Bridge. See the atmosphere of the space in the image perspectives.", "t202": "* Information is current as of October 2026. Common facilities and services are subject to the management rules and may change. Furniture and furnishings are not included in the price.", "t055": "Beyond the greenery of Hamarikyu, two towers wrapped in bands of gold. A three-story podium inspired by waves and greenery links the two towers, with a concierge counter in the 3F entrance hall.", "t075": "A 51st-floor sky spa overlooking Tokyo Tower, a double-height sky lounge, guest rooms, lounges and terraces. Refined hospitality as an extension of daily life.", "t073": "2,046 residences, 53 stories above ground. Two towers rising beyond the waters of Tokyo Bay, and an entrance drawn in curves (from the concept movie).", "t145": "Direct to Shiodome and Roppongi on the Toei Oedo Line. A bus stop 3 minutes away and the Tokyo BRT 6 minutes away are also at hand.", "t196": "* Management fees and repair reserves are monthly amounts based on the fee schedule (planned) at the time of sale. Please confirm exact amounts in the Explanation of Important Matters.", "t131": "Tsukiji District Redevelopment: a multi-purpose stadium for about 50,000 people and about 10 ha of waterfront space, opening in the early 2030s.", "t023": "A 24-hour image seen from the living room and window of Unit 4416 (AI-generated video. Furniture, interior and view are for illustration only).", "t009": "<span>Price</span><b>¥395,000,000</b><small>(tax incl.)</small>", "t020": "A 24-hour image seen from the living room of Unit 4416 (AI-generated video. Furniture, interior and view are for illustration only).", "t029": "Wall-center 104.39㎡ + trunk room 1.50㎡ + private disaster storage 0.93㎡", "t167": "106.82㎡<br>* Wall-center 104.39㎡ + trunk room 1.50㎡ + private disaster storage 0.93㎡", "t022": "A 24-hour image seen from the window of Unit 4416 (AI-generated video. Interior and view are for illustration only).", "t188": "Internet etc. ¥715 / month; repair reserve fund ¥1,848,000 (at delivery)", "t194": "Construction: Shimizu Corporation / Management: Mitsui Fudosan Residential Service (on-site)", "t166": "2LDK + 2WIC + SIC + storage (type W-104Csw, Menu Plan 1)", "t082": "Private booths, play room, 5 guest rooms, concierge, convenience store", "t143": "* The content and timing of the redevelopment are at the planning stage and subject to change.", "t154": "2LDK + 2WIC + SIC + S (W-104Csw, Menu Plan 1)", "t178": "Reinforced concrete with partial steel, 53 stories above ground and 1 below (seismic damping)", "t079": "Double-height lounge, open deck, guest room with sauna", "t182": "Completion late Nov. 2026 / Delivery Aug. 2027", "t027": "106.82<small>㎡ (contract area)</small>", "t170": "Trunk room 1.50㎡ / Private disaster storage 0.93㎡", "t067": "Façade with rounded balconies (AI-generated image)", "t057": "53 stories above ground, 2,046 residences (AI-generated image)", "t172": "LD and master bedroom approx. 2.6 m (excluding dropped ceilings and beams)", "t176": "On-site: 650 mechanical, 18 flat (by lottery, separate contract)", "t074": "Hotel-like,<br>luxurious common spaces", "t114": "10 min walk to Kachidoki Sta.,<br>Toyomi, facing the sea", "t156": "The Toyomi Tower Marine & Sky, Unit W4416", "t026": "A curved window wall,<br>and an LDK of approx. 29.4 tatami", "t072": "Twin towers of 53 stories,<br>floating on sea and sky", "t174": "Tokyo Bay, Rainbow Bridge,<br>southwest", "t001": "Unit W4416", "t014": "2,046<small>units</small>", "t049": "Facing the sea,<br>a living room of approx. 29.4 tatami", "t053": "Living-dining, evening (image perspective)", "t046": "AI-generated image based on the view CG below", "t048": "Rainbow Bridge and the city lights, view CG", "t051": "Living-dining, daytime (image perspective)", "t158": "<b>¥395,000,000</b> (tax incl.)", "t199": "Price <b>¥395,000,000</b>", "t012": "SW<small>facing</small>", "t019": "Sea and sky,<br>changing color through the day", "t054": "Two towers<br>rising from the waterfront", "t016": "10<small>min</small>", "t025": "Menu Plan 1. Furniture is for illustration only", "t065": "Carpet colors indicate the destination floors", "t095": "Guest room with sauna and balcony", "t132": "Tsukiji District Redevelopment, completion CG", "t140": "Multi-purpose stadium, MICE, waterfront", "t162": "10 min walk from Kachidoki Sta. (Toei Oedo Line)", "t052": "AI-generated. Furniture and interior are for illustration only", "t061": "Curved walls and indirect lighting lead you up to the 3rd floor", "t123": "Approx. 1,680 m (AI-generated image)", "t130": "Tsukiji, across the water,<br>is being reborn", "t139": "Kachidoki East, Harumi 5-chome West and others", "t160": "41 Toyomi-cho, Chuo-ku, Tokyo (lot number)", "t164": "West Wing, 44F / Southwest", "t198": "Sea and sky,<br>at your everyday window.", "t003": "The Toyomi Tower Marine & Sky", "t021": "From the window,<br>a day over Tokyo Bay", "t087": "Double-height, with bar counter", "t099": "Covered terrace close to the water", "t109": "Booth seating, also for meetings", "t133": "13 min walk from the site, approx. 980 m", "t060": "Entrance escalator", "t081": "Open Terrace, Library", "t086": "51–52F Sky Lounge", "t041": "Trunk Room 1.50㎡", "t080": "West / East Lounge", "t083": "Family Party Room", "t085": "24-hour laundry, nursery", "t089": "Curved counter and indirect lighting", "t102": "3F Open Terrace at dusk", "t135": "Approx. 50,000 capacity, all-weather indoor", "t008": "Delivery Aug. 2027", "t035": "WIC 2.2 / 1.0 tatami", "t040": "Balcony 13.34㎡", "t042": "Disaster Storage 0.93㎡", "t062": "3F Entrance hall", "t063": "Concierge counter", "t077": "Sky Party Lounge", "t091": "Seen through the double-height glass", "t092": "Sky Lounge sofa seating", "t094": "51F Sky Spa Guest", "t097": "Private, semi-private and open seating", "t103": "3F Fitness Room", "t104": "Train with a view of the sea", "t126": "Park Tower Kachidoki Mid", "t200": "Contract area 106.82㎡", "t047": "Night view (image)", "t058": "Entrance approach", "t096": "3F West Lounge", "t108": "3F East Lounge", "t136": "Waterfront open space", "t006": "Area 106.82㎡", "t007": "LDK approx. 29.4 tatami", "t045": "Daytime view (image)", "t088": "Sky Lounge bar", "t090": "Sky Lounge exterior", "t093": "Lounge chairs by the window", "t098": "3F Open Terrace", "t120": "Kachidoki Bridge and Sumida River Terrace", "t124": "Toyomi Sports Park", "t127": "Retail floors, 9 min walk", "t149": "From Kachidoki Station to major stations", "t002": "¥395,000,000", "t004": "West Wing, 44F", "t031": "LDK 29.4 tatami", "t032": "Kitchen 3.4 tatami", "t039": "Ceiling approx. 2.6 m", "t043": "Southwest views from the 44th floor", "t064": "Elevator hall", "t068": "Entrance at night", "t100": "3F Library", "t105": "3F Golf Range", "t106": "3F Play Room", "t107": "Billiards and darts", "t110": "3F Guest Room", "t111": "Seaside cave house", "t116": "Aerial view of Toyomi and Kachidoki", "t117": "Composited with the completion CG", "t141": "Redevelopment concept map of the area", "t184": "¥42,520 / month", "t186": "¥18,480 / month", "t033": "Master Bedroom 9.0 tatami", "t036": "SIC 2.1 tatami", "t059": "Curved canopy", "t078": "Sky Spa Guest", "t134": "Multi-purpose stadium", "t142": "Source: official website", "t144": "From Kachidoki Station", "t151": "Toward Ginza and Tokyo Station", "t163": "Floor / Facing", "t018": "Kachidoki Sta.", "t028": "㎡ (contract area)", "t034": "Bedroom 6.1 tatami", "t037": "Storage 1.1 tatami", "t038": "Bath 1620", "t076": "Sky Lounge", "t084": "Kids Space", "t113": "Seaside camp", "t118": "Waterfront near the site", "t122": "Hamarikyu Gardens", "t137": "Approx. 10 ha in total", "t138": "Unit W4416", "t069": "Green hill", "t071": "Terrace at night", "t101": "Double-height bookshelves", "t112": "Seaside Japanese inn", "t129": "Approx. 1.8 km", "t180": "2,046", "t024": "3D Floor Plan", "t070": "Lawn plaza", "t121": "11 min walk", "t168": "Balcony", "t177": "Structure / Scale", "t181": "Completion / Delivery", "t185": "Repair reserve", "t187": "Other costs", "t189": "Land rights", "t192": "Quasi-industrial", "t193": "Construction / Management", "t005": "Facing Southwest", "t010": "(tax incl.)", "t011": "Area", "t119": "5 min walk", "t125": "2 min walk", "t150": "Bus routes", "t152": "Property Outline", "t157": "Price", "t191": "Zoning", "t066": "Interior corridor", "t148": "Route map", "t153": "Floor plan", "t155": "Property", "t159": "Location", "t165": "Layout", "t171": "Ceiling height", "t175": "Parking", "t179": "Total units", "t183": "Management fee", "t190": "Freehold", "t013": "facing", "t056": "Exterior", "t128": "Ginza", "t146": "bus", "t161": "Access", "t169": "Ancillary", "t173": "View", "t015": "units", "t017": "min"}, "zh": {"x001": "「汐留」站", "x002": "「银座一丁目」站", "x003": "「有乐町」站", "x004": "「六本木」站", "x005": "「东京」站", "x006": "胜哄站前 <small>公交</small>", "x007": "银座四丁目 <small>公交</small>", "x008": "东京站丸之内南口 <small>公交</small>", "x009": "健身房・高尔夫练习场", "x010": "音乐工作室", "x011": "胜哄・晴海的再开发", "x012": "筑地地区 预定开街", "t030": "面向东京湾的弧形窗墙，环抱约29.4帖的客餐厅。主卧与次卧各设步入式衣帽间，玄关设约2.1帖的步入式鞋柜。客餐厅与主卧天花高约2.6m。", "t147": "※电车所需时间为通勤时段自「胜哄」站出发的时间，含换乘与等候（来源：官方网站）。公交为自步行3分钟的「山九本社前」等站点出发、工作日7:30〜9:00到达的所需时间（Yahoo!路线信息，2024年8月）。东京BRT「胜哄BRT」站步行6分钟。驾车经环状2号线可达筑地、新桥、虎之门。", "t201": "※本物业截至2026年10月仍在建设中。外观、公共空间、周边及筑地再开发的图片基于分售方的竣工效果CG及资料，可能与实际有所不同。景观照片与CG自相当于基地的高度拍摄或制作，与本户所见景观不同。景观不保证永久不变。", "t115": "距银座约1.8km。毗邻小学与运动公园，对岸是滨离宫与筑地。尽享都心便利的同时，将水岸的开阔感融入日常——中央区的地址。", "t044": "正面是彩虹大桥，脚下是东京湾的蔚蓝。傍晚时分，海与天空由茜色渐染为群青。这是西栋西南向住户独享的水岸全景。", "t195": "※本物业截至2026年10月仍在建设中。外观、公共空间及周边图片为竣工效果CG，可能与实际有所不同。景观照片与CG自相当于基地的高度拍摄或制作，与本户所见景观不同。", "t197": "※客厅效果图、白天景观、部分外观与滨离宫图片、24小时延时视频以及外观・公共空间视频为AI生成（基于竣工效果CG制作），家具、内装及外立面色调仅为示意。", "t050": "弧形窗墙之外，是东京湾与彩虹大桥。请通过效果图感受空间氛围。", "t202": "※刊载内容为2026年10月时点信息。公共设施与服务依管理规约可能变更。家具、陈设不含于售价中。", "t055": "越过滨离宫的绿意，是两座披着金色饰带的塔楼。以波浪与绿意为主题的三层裙楼连接两栋，3层入口大堂设有礼宾台。", "t075": "可眺望东京塔的51层空中SPA、挑高两层的空中大堂、客房、休息区与露台。将上质的款待融入日常生活。", "t073": "共2,046户，地上53层。东京湾水面之外矗立的两座塔楼，以及以曲线勾勒的入口（摘自概念影片）。", "t145": "乘都营大江户线直达汐留、六本木。步行3分钟的公交站、步行6分钟的东京BRT亦可选择。", "t196": "※管理费、修缮准备金等为依据分售时管理费一览表（预定）的月额。准确金额请以重要事项说明书为准。", "t131": "筑地地区城市再开发项目：可容纳约5万人的多功能体育场与约10公顷的水岸空间，预计2030年代前期开街。", "t023": "从4416室客厅与窗边所见的24小时意象（AI生成视频。家具、内装及景观仅为示意）。", "t009": "<span>售价</span><b>3.95亿日元</b><small>（含税）</small>", "t020": "从4416室客厅所见的24小时意象（AI生成视频。家具、内装及景观仅为示意）。", "t029": "壁芯104.39㎡＋储物间1.50㎡＋专有防灾仓库0.93㎡", "t167": "106.82㎡<br>※壁芯104.39㎡＋储物间1.50㎡＋专有防灾仓库0.93㎡", "t022": "从4416室窗边所见的24小时意象（AI生成视频。内装及景观仅为示意）。", "t188": "网络等使用费 715日元／月，修缮准备基金 1,848,000日元（交付时）", "t194": "施工 清水建设株式会社 ／ 管理 三井不动产Residential Service株式会社（常驻）", "t166": "2LDK＋2WIC＋SIC＋储藏室（W-104Csw户型・菜单方案1）", "t082": "包厢、娱乐室、5间客房、礼宾服务、便利店", "t143": "※再开发的内容与时间为规划阶段信息，今后可能变更。", "t154": "2LDK＋2WIC＋SIC＋S（W-104Csw 菜单方案1）", "t178": "钢筋混凝土造部分钢骨造 地上53层地下1层（减震・制振结构）", "t079": "挑高两层的大堂、露天平台、带桑拿的客房", "t182": "2026年11月下旬 竣工预定 ／ 2027年8月 交付预定", "t027": "106.82<small>㎡（合同面积）</small>", "t170": "储物间 1.50㎡ ／ 专有防灾仓库 0.93㎡", "t067": "弧形阳台的立面（AI生成图像）", "t057": "地上53层・共2,046户（AI生成图像）", "t172": "客餐厅・主卧 约2.6m（下垂天花・梁下部分除外）", "t176": "基地内 机械式650台・平面18台（抽签・另行签约）", "t074": "宛如酒店的<br>奢华公共空间", "t114": "步行10分钟至胜哄站，<br>面朝大海的丰海", "t156": "丰海塔 MARINE & SKY　W4416室", "t026": "弧形窗边，<br>约29.4帖的客餐厨", "t072": "浮于海天之间的<br>53层双塔", "t174": "东京湾・彩虹大桥・<br>西南方向", "t001": "W4416室", "t014": "2,046<small>户</small>", "t049": "面朝大海，<br>约29.4帖的客厅", "t053": "客餐厅 傍晚（效果图）", "t046": "基于下方景观CG的AI生成图像", "t048": "彩虹大桥与都心夜景・景观CG", "t051": "客餐厅 白天（效果图）", "t158": "<b>3.95亿日元</b>（含税）", "t199": "售价<b>3.95亿日元</b>", "t012": "西南<small>朝向</small>", "t019": "海与天空，<br>一日之间变换色彩", "t054": "矗立于水岸的<br>两座塔楼", "t016": "10<small>分钟</small>", "t025": "菜单方案1・家具仅为示意", "t065": "以地毯颜色区分目的楼层", "t095": "带桑拿与阳台的客房", "t132": "筑地地区城市再开发 竣工效果CG", "t140": "多功能体育场・MICE・水岸空间", "t162": "都营大江户线「胜哄」站 步行10分钟", "t052": "AI生成・家具与内装仅为示意", "t061": "曲面墙体与间接照明引导至3层", "t123": "约1,680m（AI生成图像）", "t130": "对岸的筑地，<br>焕然新生", "t139": "胜哄东地区、晴海五丁目西地区等", "t160": "东京都中央区丰海町41番（地番）", "t164": "西栋 44层 ／ 朝向西南", "t198": "海与天空，<br>就在日常的窗边。", "t003": "丰海塔 MARINE & SKY", "t021": "从窗边眺望，<br>东京湾的一天", "t087": "挑高两层，设吧台", "t099": "临水的带顶露台", "t109": "亦可用于会议的卡座", "t133": "距基地步行13分钟・约980m", "t060": "入口自动扶梯", "t081": "露天平台・图书馆", "t086": "51・52F 空中大堂", "t041": "储物间 1.50㎡", "t080": "西／东大堂", "t083": "家庭派对厅", "t085": "24小时洗衣房、托儿所", "t089": "曲线吧台与间接照明", "t102": "3F 露天平台 傍晚", "t135": "可容纳约5万人・室内全天候型", "t008": "2027年8月 交付预定", "t035": "WIC 2.2・1.0帖", "t040": "阳台 13.34㎡", "t042": "专有防灾仓库 0.93㎡", "t062": "3F 入口大堂", "t063": "礼宾台", "t077": "空中派对厅", "t091": "透过挑高两层的玻璃", "t092": "空中大堂沙发区", "t094": "51F 空中SPA客房", "t097": "包厢、半包厢与开放座位", "t103": "3F 健身房", "t104": "面朝大海健身", "t126": "Park Tower 胜哄 Mid", "t200": "合同面积 106.82㎡", "t047": "夜景（示意）", "t058": "入口通道", "t096": "3F 西大堂", "t108": "3F 东大堂", "t136": "水岸开放空间", "t006": "面积 106.82㎡", "t007": "客餐厨 约29.4帖", "t045": "白天景观（示意）", "t088": "空中大堂酒吧", "t090": "空中大堂外观", "t093": "窗边休闲椅", "t098": "3F 露天平台", "t120": "胜哄桥与隅田川露台", "t124": "中央区立丰海运动公园", "t127": "商业楼层・步行9分钟", "t149": "从胜哄站至主要车站", "t002": "3.95亿日元", "t004": "西栋 44层", "t031": "客餐厨 29.4帖", "t032": "厨房 3.4帖", "t039": "天花高 约2.6m", "t043": "44层，西南向的景观", "t064": "电梯厅", "t068": "入口夜景", "t100": "3F 图书馆", "t105": "3F 高尔夫练习场", "t106": "3F 娱乐室", "t107": "台球・飞镖", "t110": "3F 客房", "t111": "海边洞穴屋", "t116": "丰海・胜哄航拍", "t117": "合成竣工效果CG", "t141": "周边再开发概念图", "t184": "42,520日元／月", "t186": "18,480日元／月", "t033": "主卧 9.0帖", "t036": "SIC 2.1帖", "t059": "曲面雨篷", "t078": "空中SPA客房", "t134": "多功能体育场", "t142": "来源：官方网站", "t144": "从「胜哄」站出发", "t151": "往银座・东京站方向", "t163": "所在楼层 / 朝向", "t018": "步行至胜哄站", "t028": "㎡（合同面积）", "t034": "次卧 6.1帖", "t037": "储藏室 1.1帖", "t038": "浴室 1620", "t076": "空中大堂", "t084": "儿童空间", "t113": "海边露营", "t118": "基地周边的水岸", "t122": "滨离宫恩赐庭园", "t137": "合计约10公顷", "t138": "W4416室", "t069": "绿丘", "t071": "露台夜景", "t101": "挑高书架", "t112": "海边和风旅馆", "t129": "约1.8km", "t180": "2,046户", "t024": "3D户型图", "t070": "草坪广场", "t121": "步行11分钟", "t168": "阳台", "t177": "结构・规模", "t181": "竣工・交付", "t185": "修缮准备金", "t187": "其他费用", "t189": "土地权利", "t192": "准工业地域", "t193": "施工・管理", "t005": "朝向西南", "t010": "（含税）", "t011": "合同面积", "t119": "步行5分钟", "t125": "步行2分钟", "t150": "公交线路", "t152": "物业概要", "t157": "售价", "t191": "用途地域", "t066": "内走廊", "t148": "线路图", "t153": "户型图", "t155": "物业名称", "t159": "所在地", "t165": "户型", "t171": "天花高度", "t175": "停车场", "t179": "总户数", "t183": "管理费", "t190": "所有权", "t013": "朝向", "t056": "外观", "t128": "银座", "t146": "公交", "t161": "交通", "t169": "附属", "t173": "景观", "t015": "户", "t017": "分钟"}};
+var I18N_META={"title": ["The Toyomi Tower Marine & Sky W4416 | West Wing 44F, Southwest, 2LDK+2WIC+SIC, 106.82 m²", "丰海塔 MARINE & SKY W4416｜西栋44层 朝向西南 2LDK＋2WIC＋SIC 106.82㎡"], "description": ["The Toyomi Tower Marine & Sky, Unit W4416, West Wing 44F. Southwest-facing 2LDK+2WIC+SIC+S, contract area 106.82 m², LDK approx. 29.4 tatami. A residence facing Rainbow Bridge and Tokyo Bay, shown with 3D floor plans, views, common areas and video.", "丰海塔 MARINE & SKY 西栋44层 W4416室。朝向西南・2LDK＋2WIC＋SIC＋S・合同面积106.82㎡・客餐厨约29.4帖。正面眺望彩虹大桥与东京湾，以3D户型图、景观、公共空间的图片与视频呈现。"]};
+(function(){
+  var els=null;
+  function setLang(l){
+    if(l!=='en'&&l!=='zh')l='ja';
+    if(!els){els=Array.prototype.slice.call(document.querySelectorAll('[data-i18n]'));els.forEach(function(e){e.setAttribute('data-ja',e.innerHTML);});}
+    els.forEach(function(e){var id=e.getAttribute('data-i18n');var t=(l==='ja')?e.getAttribute('data-ja'):(I18N[l][id]||e.getAttribute('data-ja'));if(e.innerHTML!==t)e.innerHTML=t;});
+    document.documentElement.lang=l;
+    var ti=document.querySelector('title'),md=document.querySelector('meta[name="description"]');
+    if(!ti.getAttribute('data-ja')){ti.setAttribute('data-ja',ti.textContent);md.setAttribute('data-ja',md.getAttribute('content'));}
+    ti.textContent=(l==='ja')?ti.getAttribute('data-ja'):I18N_META.title[l==='en'?0:1];
+    md.setAttribute('content',(l==='ja')?md.getAttribute('data-ja'):I18N_META.description[l==='en'?0:1]);
+    document.querySelectorAll('#lang a').forEach(function(a){a.classList.toggle('on',a.getAttribute('data-lang')===l);});
+    try{localStorage.setItem('lang',l);}catch(e){}
+  }
+  document.querySelectorAll('#lang a').forEach(function(a){a.addEventListener('click',function(){setLang(a.getAttribute('data-lang'));});});
+  var q=(location.search.match(/[?&]lang=(ja|en|zh)/)||[])[1],st=null;try{st=localStorage.getItem('lang');}catch(e){}
+  setLang(q||st||'ja');
 })();
 </script>
 </body>
