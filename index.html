@@ -104,6 +104,8 @@ figcaption .t{color:#fff;font-weight:400}
 .movie{padding:0;background:#000;position:relative;overflow:hidden}
 .movie video{width:100%;height:100svh;max-height:820px;object-fit:cover}
 .movie.short video{height:62svh;min-height:380px;max-height:620px}
+@keyframes panlr{from{object-position:0% 50%}to{object-position:100% 50%}}
+@media (max-aspect-ratio:1/1){.movie video.pan{object-position:0% 50%;animation:panlr 16s ease-in-out infinite alternate}}
 .movie .cap{position:absolute;left:0;right:0;bottom:0;padding:120px 22px 40px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.8));z-index:2}
 .movie .cap .no{display:flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:.34em;color:var(--gold2);text-transform:uppercase}
 .movie .cap .no::before{content:"";width:34px;height:1px;background:var(--gold2);flex:0 0 auto}
@@ -281,7 +283,7 @@ figcaption .d{display:none}
 
 <!-- 01 TIME-LAPSE -->
 <section class="movie">
-  <video class="lazy" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_timelapse.jpg" data-webm="video/timelapse.webm" data-mp4="video/timelapse.mp4"></video>
+  <video class="lazy pan" muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5-page" preload="none" poster="img/poster_timelapse.jpg" data-webm="video/timelapse.webm" data-mp4="video/timelapse.mp4"></video>
   <div class="cap">
     <p class="no">01 — Time-lapse</p>
     <h2>海と空が、<br>一日の色を変えていく</h2>
