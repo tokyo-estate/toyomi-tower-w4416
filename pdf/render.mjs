@@ -5,6 +5,8 @@ const tr=JSON.parse(fs.readFileSync('/Users/leetenki/AI_share/在庫_販売物�
 const dic={en:{},zh:{}};
 for(const [k,v] of Object.entries(tr)){ if(k.startsWith('t')){dic.en[k]=v[0];dic.zh[k]=v[1];} }
 let i=1; for(const [ja,v] of Object.entries(tr._extra)){ const id='x'+String(i++).padStart(3,'0'); dic.en[id]=v[0]; dic.zh[id]=v[1]; }
+const repl=process.argv[4]?JSON.parse(fs.readFileSync(process.argv[4],'utf8')):[];
+for(const l of ['en','zh']) for(const k of Object.keys(dic[l])) for(const [o,n] of repl){ dic[l][k]=dic[l][k].split(o).join(n); }
 const b=await chromium.launch({channel:'chrome'});
 for(const lang of ['ja','en','zh']){
   const p=await b.newPage({viewport:{width:794,height:1123}});
