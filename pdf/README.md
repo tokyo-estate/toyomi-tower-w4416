@@ -4,3 +4,5 @@
 - 本文を直したら brochure.html の該当要素（data-i18n の id で対応）と translations.json を直して再生成
 - 検査: render.mjs がページごとにフッター被りを出力（空配列が合格）。フォントは Hiragino/PingFang/Helvetica Neue（ローカル）。CJK は Type 3 埋め込みになるので、印刷用に出すときは memory `feedback_chrome_pdf_type3_print_error` に従い 300dpi 画像化を検討
 - 納品先: `_未整理/豊海タワーW4416_販売資料_{日本語,English,中文}.pdf`
+- サイト同梱: このフォルダの `W4416_{ja,en,zh}.pdf` が公開される（index.html の close 節からリンク）。再生成したら `_未整理/` の納品版と同じものをここにもコピーして `_deploy.sh`
+
